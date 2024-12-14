@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorry Mom</title>
+  <style>
+    /* General styles */
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, #ff6f61, #ffcc00, #ff8c94);
+      background-size: 400% 400%;
+      animation: gradientAnimation 10s ease infinite;
+      text-align: center;
+    }
+
+    /* Gradient background animation */
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Main apology message */
+    .message {
+      margin-top: 60px;
+      padding: 20px;
+    }
+
+    .message h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #ffcc00; /* Gold text */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .message p {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
+
+    /* Cat image */
+    .cat-container {
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .cat-container img {
+      width: 300px;
+      height: auto;
+      border: 5px solid #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    /* Floating hearts animation */
+    .heart {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: #ff6f61;
+      transform: rotate(-45deg);
+      animation: floatHeart 4s ease-in-out infinite;
+    }
+
+    .heart:before,
+    .heart:after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-color: #ff6f61;
+      border-radius: 50%;
+    }
+
+    .heart:before {
+      top: -25px;
+      left: 0;
+    }
+
+    .heart:after {
+      top: 0;
+      left: 25px;
+    }
+
+    @keyframes floatHeart {
+      0% {
+        transform: translateY(0) rotate(-45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-300px) rotate(-45deg);
+        opacity: 0;
+      }
+    }
+
+    .heart:nth-child(1) {
+      top: 60%;
+      left: 20%;
+      animation-delay: 0s;
+      transform: scale(1);
+    }
+    .heart:nth-child(2) {
+      top: 70%;
+      left: 50%;
+      animation-delay: 1s;
+      transform: scale(0.8);
+    }
+    .heart:nth-child(3) {
+      top: 80%;
+      left: 80%;
+      animation-delay: 2s;
+      transform: scale(1.2);
+    }
+
+    /* Footer styling */
+    footer {
+      margin-top: 50px;
+      font-size: 1rem;
+      color: #ffe4b5;
+    }
+
+    /* Audio player */
+    .audio-container {
+      margin-top: 30px;
+    }
+
+    audio {
+      width: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Apology Message -->
+  <div class="message">
+    <h1>Sorry, Mom!</h1>
+    <p>I made a mistake, and I truly regret it. Please forgive me, Mom. You are my everything, and I love you more than words can express.</p>
+  </div>
+
+  <!-- Cat Image -->
+  <div class="cat-container">
+    <img src="cat_saying_sorry.png" alt="Cute Cat Saying Sorry">
+  </div>
+
+  <!-- Floating Hearts -->
+  <div class="heart"></div>
+  <div class="heart"></div>
+  <div class="heart"></div>
+
+  <!-- Background Song -->
+  <div class="audio-container">
+    <h3>Listen to this song while reading...</h3>
+    <audio controls autoplay loop>
+      <source src="Qaafirana.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    Made with Love 💖 to say Sorry!
+  </footer>
+
+</body>
+  </html>
